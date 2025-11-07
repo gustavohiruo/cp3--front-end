@@ -1,0 +1,275 @@
+/* Reset básico para remover margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais do body */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f5f0e8;
+    color: #2c2c2c;
+    line-height: 1.6;
+}
+
+/*HEADER COM FLEXBOX*/
+
+header {
+    background: linear-gradient(135deg, #6b1f3d, #8b2f4a);
+    color: white;
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* FLEXBOX 1: Container do header com logo e navegação lado a lado */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Espaça logo e menu nas extremidades */
+    align-items: center; /* Alinha verticalmente ao centro */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/*NAVEGAÇÃO COM FLEXBOX */
+
+/* FLEXBOX 2: Menu horizontal usando Flexbox */
+nav ul {
+    display: flex;
+    gap: 2rem; /* Espaçamento entre os itens do menu */
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Transição suave para os efeitos */
+}
+
+/* PSEUDO-CLASSE 1: :hover nos links de navegação */
+/* TRANSFORMAÇÃO 1: scale() aumenta o tamanho do link */
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.15); /* Aumenta em 15% */
+}
+
+/* PSEUDO-CLASSE 2: :focus para navegação por teclado */
+nav a:focus {
+    outline: 2px solid #ffd700;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/*SEÇÃO HERO*/
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%238b2f4a" width="1200" height="600"/><circle fill="%236b1f3d" cx="200" cy="150" r="80"/><circle fill="%236b1f3d" cx="800" cy="400" r="100"/><circle fill="%23a0305f" cx="1000" cy="200" r="60"/></svg>');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.btn-hero {
+    background-color: #ffd700;
+    color: #2c2c2c;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* PSEUDO-CLASSE 3: :hover no botão hero */
+/* TRANSFORMAÇÃO 2: translateY() move o botão para cima e scale() aumenta */
+.btn-hero:hover {
+    background-color: #ffed4e;
+    transform: translateY(-8px) scale(1.05); /* Move 8px para cima e aumenta 5% */
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+}
+
+/* SEÇÃO DE PRODUTOS COM FLEXBOX */
+
+.produtos {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.produtos h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #6b1f3d;
+    margin-bottom: 3rem;
+}
+
+/* FLEXBOX 3: Container dos cards de produtos */
+.produtos-container {
+    display: flex;
+    justify-content: space-between; /* Distribui cards com espaço igual entre eles */
+    gap: 2rem; /* Espaçamento entre os cards */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+}
+
+/*CARDS DE PRODUTOS*/
+
+.produto-card {
+    flex: 1; /* Cards ocupam espaço igual */
+    min-width: 280px; /* Largura mínima antes de quebrar linha */
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+/* PSEUDO-CLASSE 4: :hover nos cards de produtos */
+/* TRANSFORMAÇÃO 3: translateY() e rotate() criam efeito de elevação e inclinação */
+.produto-card:hover {
+    transform: translateY(-15px) rotate(2deg); /* Sobe 15px e rotaciona 2 graus */
+    box-shadow: 0 20px 40px rgba(107, 31, 61, 0.3);
+}
+
+
+.produto-info {
+    padding: 1.5rem;
+}
+
+.produto-info h3 {
+    color: #6b1f3d;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.produto-info p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.preco {
+    font-size: 1.8rem;
+    color: #8b2f4a;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.btn-comprar {
+    background-color: #6b1f3d;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+/* PSEUDO-CLASSE 5: :hover nos botões de compra */
+/* TRANSFORMAÇÃO 4: scale() aumenta o botão */
+.btn-comprar:hover {
+    background-color: #8b2f4a;
+    transform: scale(1.08); /* Aumenta o botão em 8% */
+    box-shadow: 0 5px 15px rgba(107, 31, 61, 0.4);
+}
+
+/*FOOTER COM FLEXBOX*/
+
+footer {
+    background-color: #2c2c2c;
+    color: white;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+/* FLEXBOX 4: Container do footer com 3 seções distribuídas */
+.footer-container {
+    display: flex;
+    justify-content: space-around; /* Distribui seções com espaço ao redor */
+    align-items: flex-start; /* Alinha ao topo */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    flex-wrap: wrap; /* Permite quebra em telas menores */
+    gap: 2rem;
+}
+
+.footer-section {
+    flex: 1; /* Seções ocupam espaço igual */
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+.footer-section p,
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+/* PSEUDO-CLASSE 6: :hover nos links do footer */
+/* TRANSFORMAÇÃO 5: translateX() move os links para a direita */
+.footer-section a:hover {
+    color: #ffd700;
+    transform: translateX(10px); /* Move 10px para a direita */
+}
+
+/*RESPONSIVIDADE*/
+
+/* Ajustes para tablets (telas até 768px) */
+@media (max-width: 768px) {
+    /* Header vira coluna em telas menores */
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Menu de navegação vira coluna */
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    /* Cards de produtos em coluna */
+    .produtos-container {
+        flex-direction: column;
+    }
+}
