@@ -47,12 +47,9 @@ Localmente:
 Clone o repositório
 Abra o arquivo index.html no navegador
 
-Online:
-👉 GitHub Pages: 
-
 👨‍💻 Autor
 Gustavo atsuyuki hiruo
 RM567625
 
 
-Repositório GitHub: 
+Repositório GitHub: https://github.com/gustavohiruo/cp3--front-end
