@@ -53,3 +53,4 @@ RM567625
 
 
 Repositório GitHub: https://github.com/gustavohiruo/cp3--front-end
+link go Github pages: https://gustavohiruo.github.io/cp3--front-end/
